@@ -1,0 +1,290 @@
+.checkoutContainer{
+    width: calc(100% - 400px);
+    margin-top: 10px;
+  
+}
+.checkoutStep{
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 10px 20px 0 rgb(0 0 0 / 5%);
+    margin-bottom: 10px;
+    /* border: 1px solid grey; */
+    /* border-radius: 25px; */
+}
+.checkoutHeader{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+ 
+   
+}
+.checkoutHeader.active{
+    background: #cb8364;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+
+}
+.checkoutHeader .stepNumber{
+    display: inline-block;
+    text-align: center;
+    background: #eee;
+    color: #2874f0;
+    border-radius: 50%;
+    font-size: 12px;
+    box-sizing: border-box;
+    /* padding: 7px 7px; */
+    text-align: center;
+    justify-self: baseline;
+    width: 25px;
+    height: 25px;
+    line-height: 2;
+
+}
+.checkoutHeader.active .stepNumber{
+    background: #fff;
+}
+.stepTitle{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #878787;
+    margin-left: 15px;
+}
+.checkoutHeader.active .stepTitle{
+    color: #fff;
+}
+.loggedInId{
+    font-size: 12px;
+    margin: 0px 0 10px 60px;
+}
+
+.addressContainer{
+    box-sizing: border-box;
+    padding: 20px;
+    background: #f5faff;
+}
+.addressinfo{
+    padding-left: 15px;
+    box-sizing: border-box;
+    width: 100%;
+}
+.addressDetail{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    font-weight: 600;
+    font-family: 'Roboto';
+    font-size: 12px;
+    color: #333;
+}
+.addressType{
+    display: inline-block;
+    margin: 0 10px;
+    text-transform: uppercase;
+    background: #eee;
+    font-weight: 500;
+    padding: 1px 5px;
+    font-size: 10px;
+    border-radius: 2px;
+    color: #777777;
+}
+.fullAddress{
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 18px;
+}
+.stepCompleted{
+    padding: 0 0 20px 60px;
+    font-size: 12px;
+}
+
+.newStepper{
+    /* background-color: #2874f0 !important; */
+    position: sticky;
+    box-shadow: 0 10px 20px 0 rgb(0 0 0 / 5%) !important;
+}
+
+.priceNewDetails{
+    height: auto;
+    width: 380px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px 0 rgb(0 0 0 / 5%) !important;
+    margin-top: 10px;
+    /* padding: 20px; */
+}
+.priceNewDetails h2{
+     text-align: center;
+     text-transform: uppercase;
+     font-size: 18px;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     border-bottom: 1px solid rgba(240, 237, 237, 1);
+     opacity: 0.6;
+
+}
+.priceFlex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.innerPriceFlex h5{
+    font-weight: 400;
+    font-size: 16px;
+    padding: 10px;
+}
+.innerPriceFlex h3{
+    font-weight: 900;
+    font-size: 18px;
+    padding: 10px;
+}
+.MuiStepIcon-root.MuiStepIcon-active {
+    color: #cb8364 !important;
+}
+.MuiStepIcon-root.MuiStepIcon-completed {
+    color: #3f51b5;
+}
+@media(max-width: 565px){
+    .checkoutContainer{
+        width: 100%;
+      
+    }
+    .priceNewDetails{
+        height: auto;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 10px 20px 0 rgb(0 0 0 / 5%) !important;
+        margin-top: 10px;
+        /* padding: 20px; */
+    }
+    
+}
+
+.thankyouSuccess{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    height: 500px;
+    width: calc(100%-40px);
+    
+}
+.confirmOd{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    /* left: 45px; */
+}
+.confirmOd img{
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+.confirmText{
+    /* position: relative; */
+    /* margin-top: -100px !important; */
+    /* padding-bottom: 10px; */
+
+}
+.confirmText h4{
+    margin-top: -100px;
+}
+.confirmText p{
+    padding-top: 5px;
+    text-align: center;
+}
+.confirmButtonContainer{
+
+    position: relative;
+   top: 10px !important;
+}
+.confirmButtonContainer a{
+ 
+   text-decoration: none;
+    border: 1px solid #cb8364;
+    padding: 13px 35px;
+    margin: 15px;
+    background-color: transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.7s;
+    color: #cb8364;
+  
+ 
+}
+.confirmButtonContainer a:hover{ 
+   
+    border: none;
+    padding: 13px 35px;
+    margin: 10px;
+    background-color: transparent;
+    border-radius: 25px;
+    background-color: #cb8364;
+    color: white;
+ 
+}
+.confirmActive{
+    background-color: #cb8364 !important;
+    color: white !important;
+}
+.confirmActive:hover{
+    background-color:red !important;
+    color: white !important;
+}
+@media(max-width: 565px){
+    .thankyouSuccess{
+        display: flex;
+        justify-content: first baseline;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        height: 500px;
+        width: calc(100%-40px);
+        
+    }
+    .confirmText h4{
+        /* margin-top: -100px; */
+        padding: 20px;
+        text-align: center;
+    }
+    .confirmText p{
+        /* margin-top: -100px; */
+        padding: 0px;
+        text-align: center;
+    }
+
+    .confirmButtonContainer{
+
+        position: relative;
+       top: 0px;
+    }
+    .confirmButtonContainer a{
+     
+       text-decoration: none;
+        border: 1px solid #cb8364;
+        padding: 8px 15px;
+        margin: 10px;
+        background-color: transparent;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s;
+        color: #cb8364;
+      
+     
+    }
+    .confirmButtonContainer a:hover{ 
+       
+        border: none;
+        padding: 13px 35px;
+        margin: 10px;
+        background-color: transparent;
+        border-radius: 25px;
+        background-color: red;
+        color: white;
+     
+    }
+}

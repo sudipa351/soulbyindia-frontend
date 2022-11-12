@@ -1,0 +1,239 @@
+@import url(https://allfont.net/allfont.css?fonts=1-vivaldi-);
+
+.renderCat{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+.MuiMenuItem-root {
+  width: 100% !important;
+  overflow: hidden;
+  /* padding: 10px 60px !important; */
+  font-size: 1rem !important;
+  box-sizing: border-box;
+  min-height: 48px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  padding-top: 6px;
+  white-space: nowrap;
+  letter-spacing: 0.00938em !important;
+  padding-bottom: 6px;
+ 
+}
+.MuiMenuItem-root a{
+  text-decoration: none !important;
+  color: black !important;
+}
+.MuiPopover-paper {
+  outline: 0;
+  position: relative !important;
+  max-width: calc(25% - 32px) !important;
+  min-width: 50px !important;
+  max-height: calc(100% - 32px);
+  min-height: 16px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* margin-top: 60px !important; */
+  text-align: center !important;
+  margin-left: 130px !important;
+  top: 70px!important;
+  padding: 20px !important;
+}
+.rendcat{
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+
+.menuHeader1{
+  width: auto;
+  height: auto;
+  color: black !important;
+  font-weight: 400;
+  margin: 0px;
+ 
+  
+  /* background-color: #fff;
+  border-bottom: 1px solid #cccccc; */
+  /* box-shadow: 0 2px 2px -2px #333; */
+}
+.menuHeader1 ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuHeader1 > ul {
+  position: relative;
+  display: flex;
+  margin: 0 40px;
+
+
+}
+
+.menuHeader1 > ul > li > span {
+
+  display: block;
+  line-height: 48px;
+  cursor: pointer;
+  padding: 0 20px;
+  font-size: 16px;
+
+}
+.menuHeader1 > ul > li > span:hover{
+
+  color: #cb8364 !important;
+}
+
+.menuHeader1 > ul > li > ul{
+  position: absolute;
+  background: #fff;
+  /* margin-top: 8px; */
+  left: 0px;
+  right: 0;
+  display: none;
+  border: 1px solid #cccccc;
+  z-index: 1;
+  width: 100%;
+
+}
+
+.menuHeader1 > ul > li:hover ul{
+  display: block;
+
+}
+
+.menuHeader1 > ul > li > ul > li{
+margin: 0 20px;
+min-width: 150px;
+
+}
+.menuHeader1 > ul > li > ul > li{
+  float: left;
+  
+}
+.menuHeader1 > ul > li > ul > li >a{
+  font-weight: bold;
+  display: block;
+  font-size: 12px;
+  text-decoration: none;
+  color: #cb8364 !important;
+  font-weight: bold !important;
+}
+.menuHeader1 > ul > li > ul > li a{
+ display: block;
+ padding: 5px 0;
+ font-size: 12px;
+ text-decoration: none;
+ font-weight: 400;
+ color: #212121 ;
+}
+
+.loggiedinProfile{
+  padding: 5px;
+}
+.loggiedinProfile h5{
+  text-align: left;
+  font-size: 16px;
+}
+.loggiedinProfile p{
+  text-align: left;
+  font-size: 16px;
+}
+.loggiedinProfile button{
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid #cb8364;
+  padding: 8px 30px;
+  background-color : transparent;
+  color: #cb8364;
+  /* border-radius: 25px; */
+}
+.logosection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 0px;
+  margin-top: 0px;
+}
+.logosection p{
+  display: none;
+}
+.logoutButton{
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid #cb8364;
+  padding: 8px 30px;
+  background-color : transparent;
+  color: #cb8364;
+}
+@media(max-width: 768px)
+{
+  .logosection{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    letter-spacing: 0px;
+    margin-top: 0px;
+  
+    margin-left: -15px;
+  }
+  .logosection span{
+    display: none;
+  }
+  .logosection p{
+    font-family: '1 Vivaldi ', arial;
+    /* text-transform: capitalize; */
+    color: #cb8364;
+    font-size: 20px;
+    padding-top: 16px;
+    font-weight: 900;
+    display: block;
+  }
+  .renderCat{
+  display: none;
+   
+  }
+  .rendcat{
+  display: none;
+  }
+  .logo-mmm{
+    
+  }
+  .MuiMenuItem-root {
+    width: 100% !important;
+    overflow: hidden;
+    /* padding: 10px 60px !important; */
+    font-size: 1rem !important;
+    box-sizing: border-box;
+    min-height: 48px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    padding-top: 6px;
+    white-space: nowrap;
+    letter-spacing: 0.00938em !important;
+    padding-bottom: 6px;
+   
+   
+  }
+  .MuiPopover-paper {
+    outline: 0;
+    position: relative !important;
+    max-width: calc(80% - 32px) !important;
+    min-width: 50px !important;
+    max-height: calc(100% - 32px);
+    min-height: 100% !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 0 !important;
+    left: 0 !important;
+    margin-left: 0 !important;
+    /* margin-top: -13px !important; */
+    text-align: center !important;
+ 
+  }
+}

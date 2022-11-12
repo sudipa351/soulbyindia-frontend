@@ -1,0 +1,115 @@
+.thankyouSuccess{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    height: 500px;
+    width: calc(100%-40px);
+    
+}
+.confirmOd{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    /* left: 45px; */
+}
+.confirmOd img{
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+.confirmText{
+    /* position: relative; */
+    /* margin-top: -100px !important; */
+    /* padding-bottom: 10px; */
+
+}
+.confirmText h4{
+    margin-top: -100px;
+}
+.confirmButtonContainer{
+
+    position: relative;
+   top: -30px;
+}
+.confirmButtonContainer a{
+ 
+   text-decoration: none;
+    border: 1px solid #cb8364;
+    padding: 13px 35px;
+    margin: 10px;
+    background-color: transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.7s;
+    color: #cb8364;
+  
+ 
+}
+.confirmButtonContainer a:hover{ 
+   
+    border: none;
+    padding: 13px 35px;
+    margin: 10px;
+    background-color: transparent;
+    border-radius: 25px;
+    background-color: #cb8364;
+    color: white;
+ 
+}
+.confirmActive{
+    background-color: #cb8364 !important;
+    color: white !important;
+}
+.confirmActive:hover{
+    background-color:red !important;
+    color: white !important;
+}
+@media(max-width: 565px){
+    .thankyouSuccess{
+        display: flex;
+        justify-content: first baseline;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        height: 500px;
+        width: calc(100%-40px);
+        
+    }
+    .confirmText h4{
+        /* margin-top: -100px; */
+        padding: 20px;
+        text-align: center;
+    }
+    .confirmButtonContainer{
+
+        position: relative;
+       top: 0px;
+    }
+    .confirmButtonContainer a{
+     
+       text-decoration: none;
+        border: 1px solid #cb8364;
+        padding: 8px 15px;
+        margin: 10px;
+        background-color: transparent;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s;
+        color: #cb8364;
+      
+     
+    }
+    .confirmButtonContainer a:hover{ 
+       
+        border: none;
+        padding: 13px 35px;
+        margin: 10px;
+        background-color: transparent;
+        border-radius: 25px;
+        background-color: red;
+        color: white;
+     
+    }
+}

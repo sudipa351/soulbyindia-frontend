@@ -1,0 +1,562 @@
+.portfolioContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    margin:0 100px;
+}
+.portfolioContainer div:nth-of-type(1) {flex-grow: 3;}
+.portfolioLeftContainer{
+    width: 100%;
+    height: auto;
+    /* background-color: black; */
+}
+
+.image-card{
+    position: relative;
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 3px;
+    transition: all .4s;
+  }
+  .image-card:hover{
+    box-shadow: 1px 1px 6px 1px rgba(0,0,0,.3);
+  }
+  .image-card:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 180%;
+    height: 100%;
+    width: 75%;
+    background: rgba(255,255,255,.1);
+    z-index: 1;
+    transform: skew(45deg);
+    opacity: .7;
+    pointer-events: none;
+    transition: .5s;
+  }
+  .image-card:hover:before{
+    left: -180%;
+  }
+  .image-card img{
+    height: 100%;
+    width: 100%;
+    filter: grayscale(100%);
+    transition: 2s;
+  }
+  .image-card:hover img{
+    filter: grayscale(0%);
+    transform: scale(1.1);
+  }
+  .image-card h2{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #e74c3c;
+    padding: 10px 0;
+    color: #f9d6d2;
+    font-family: verdana;
+    border: 1px solid #e64533;
+    user-select: none;
+    transform: perspective(500px) rotateY(-90deg);
+    transform-origin: right;
+    transition: all .5s;
+  }
+  .image-card:hover h2{
+    transform: perspective(500px) rotateY(0deg);
+  }
+  .image-card .ulnew{
+    position: absolute;
+    list-style: none;
+    top: 0;
+    left: -30px;
+    background: rgba(255,255,255,0);
+  }
+  .image-card .ulnew .linew{
+    
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    background: #333;
+    cursor: pointer;
+    transition: all .5s;
+    transform: perspective(800px) rotateY(90deg);
+    transform-origin: left;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+  }
+  .image-card:hover .ulnew .linew{
+    transform: perspective(800px) rotateY(0deg);
+  }
+  .image-card:hover .ulnew .linew:nth-child(1){
+    transition-delay: .2s;
+  }
+  .image-card:hover .ulnew .linew:nth-child(2){
+    transition-delay: .6s;
+  }
+  .image-card:hover .ulnew .linew:nth-child(3){
+    transition-delay: .8s;
+  }
+  .image-card:hover .ulnew li:nth-child(4){
+    transition-delay: 1s;
+  }
+  .image-card .ulnew .linew i{
+    font-size: 20px;
+    color: tomato !important;
+    background: rgba(255,255,255,0);
+    text-align: center !important;
+    margin-left: 10px;
+  }
+  .ulnew .linew span{
+    position: absolute;
+    left: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: #333;
+    color: tomato;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding: 0 10px;
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+    transition: all .5s;
+  }
+  .ulnew .linew:hover span{
+    left: 30px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .portfolioRightContainer{
+    /* width: 100%; */
+    height: 400px;
+    /* background-color: blue; */
+    padding: 10px 70px;
+  
+}
+.portfolioRightContainer p{
+    text-align: justify;
+
+}
+.portfolioRightContainer h5{
+    padding-bottom: 20px;
+}
+.portfolioRightContainer .portfolioGridtextContainer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* row-gap: 20px */
+    margin:10px 40px;
+}
+.portfolioGridtextContainer h6{
+    color: #cb8364 !important;
+    font-weight: 700;
+}
+.portfolioRightContainer button{
+    border: none;
+    background-color: #cb8364;
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+/* services */
+.serviceContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.serviceBox{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    padding: 0 10px;
+}
+.serviceBox .service-icon{
+    color: #DC007E;
+    font-size: 45px;
+    text-shadow: 3px 3px 2px #fff,-3px 0 2px #fff,0 -3px 2px #fff;
+    margin: 0 0 100px;
+    position: relative;
+    z-index: 1;
+}
+.serviceBox .service-icon .fa{
+    transform: rotateY(0);
+    transition: all 0.3s ease;
+    background-color: white !important;
+    /* margin-top: -10px;
+    margin-inline: 10px; */
+}
+.serviceBox:hover .service-icon .fa { transform: rotateY(360deg); }
+.serviceBox .service-icon:before,
+.serviceBox .service-icon:after{
+    content: "";
+    background: linear-gradient(to right,#DC007E 49%,#AF0072 50%);
+    width: 153px;
+    height: 100px;
+    transform: translateX(-50%) translateY(50%);
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    
+    -webkit-clip-path: polygon(50% 37%, 100% 0, 50% 100%, 50% 100%, 0 0);
+    clip-path: polygon(50% 37%, 100% 0, 50% 100%, 50% 100%, 0 0);
+}
+.serviceBox .service-icon:after{
+    background: #DC007E;
+    width: 150px;
+    height: 150px;
+    transform-origin: center center;
+    transform: translateX(-50%) translateY(-50%) rotateX(63deg);
+    top: 56px;
+    left: 50%;
+    z-index: -1;
+    -webkit-clip-path: polygon(50% 0, 0 50%, 50% 100%, 50% 10%, 90% 50%, 50% 90%, 10% 50%, 50% 10%, 50% 100%, 100% 50%);
+    clip-path: polygon(50% 0, 0 50%, 50% 100%, 50% 10%, 90% 50%, 50% 90%, 10% 50%, 50% 10%, 50% 100%, 100% 50%);
+}
+.serviceBox .title{
+    color: #AF0072;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+.serviceBox .description{
+    color: #666;
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+}
+.serviceBox.orange .service-icon{ color: #EC3C00; }
+.serviceBox.orange .service-icon:before{ background: linear-gradient(to right,#EC3C00 49%,#BE2D0E 50%); }
+.serviceBox.orange .service-icon:after{ background:#EC3C00; }
+.serviceBox.orange .title{ color: #EC3C00; }
+.serviceBox.purple .service-icon{ color: #8907DC; }
+.serviceBox.purple .service-icon:before{ background: linear-gradient(to right,#8907DC 49%,#5000AD 50%); }
+.serviceBox.purple .service-icon:after{ background:#8907DC; }
+.serviceBox.purple .title{ color: #8907DC; }
+.serviceBox.blue .service-icon{ color: #00CFD5; }
+.serviceBox.blue .service-icon:before{ background: linear-gradient(to right,#00CFD5 49%,#22a6b3 50%); }
+.serviceBox.blue .service-icon:after{ background:#00CFD5; }
+.serviceBox.blue .title{ color: #00CFD5; }
+@media only screen and (max-width:990px){
+    .serviceBox{ margin: 0 0 30px; }
+}
+
+.mySkill{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 50px;
+  margin-top: 100px;
+  column-gap: 20px;
+}
+.mySkillLeft{
+  text-align: justify;
+}
+.mySkillLeft h5{
+  text-transform: capitalize;
+}
+.mySkillLeft p{
+  opacity: 0.8;
+}
+.progress-line__outer {
+  display: flex;
+  margin: 0px 0px;
+}
+.progress-line{
+  margin-top: -10px;
+}
+
+#gallery{
+  -webkit-column-count:4;
+  -moz-column-count:4;
+  column-count:4;
+  
+  -webkit-column-gap:20px;
+  -moz-column-gap:20px;
+  column-gap:20px;
+}
+@media (max-width:1200px){
+  #gallery{
+  -webkit-column-count:3;
+  -moz-column-count:3;
+  column-count:3;
+    
+  -webkit-column-gap:20px;
+  -moz-column-gap:20px;
+  column-gap:20px;
+}
+}
+@media (max-width:800px){
+  #gallery{
+  -webkit-column-count:2;
+  -moz-column-count:2;
+  column-count:2;
+    
+  -webkit-column-gap:20px;
+  -moz-column-gap:20px;
+  column-gap:20px;
+}
+}
+@media (max-width:600px){
+  #gallery{
+  -webkit-column-count:1;
+  -moz-column-count:1;
+  column-count:1;
+}  
+}
+#gallery img,#gallery video {
+  width:100%;
+  height:auto;
+  margin: 4% auto;
+  box-shadow:-3px 5px 15px #000;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.modal-img,.model-vid{
+  width:100%;
+  height:auto;
+}
+.modal-body{
+  padding:0px;
+}
+
+.inner-testi1{
+  display: flex;
+  flex-direction: column;
+  
+}
+.counterProfile{
+  background: url(../../images/counter.jpg)  no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* background-color: red; */
+  padding: 70px 70px;
+  color: white;
+  text-align: center;
+  margin-bottom: -80px;
+}
+.counterInnerProfile{
+  text-align: center;
+  text-transform: capitalize;
+}
+.counterInnerProfile h5{
+  color: #cb8364;
+  font-size: 44px;
+  font-weight: 300;
+}
+.counterInnerProfile p{
+  font-size: 14px;
+}
+
+
+
+
+
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1080 900'%3E%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%234FE'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+}
+
+.ulContact {
+  margin-top: 0px;
+  /* margin-right: 50px; */
+  display: flex;
+  flex-direction: column;
+}
+
+.ulContact .liContact {
+  list-style: none;
+  margin: 5px 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background: #cb8364;
+  border-radius: 50%;
+  margin-right: 15px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.contact-section {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  /* width: 100%; */
+  background: white;
+  padding: 40px;
+  border-radius: 5px;
+  height: 500px;
+  margin-left: 300px;
+
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  
+}
+
+.contact-section textarea  {
+  grid-column: 1 / -1;
+  resize: none;
+  width: 100%;
+  height: 140px;
+  border-radius: 10px;
+}
+.contact-section input[type="tel"]  {
+  grid-column: 1 / -1;
+  resize: none;
+  width: 100%;
+  height: 42px;
+}
+
+.contact-section input[type=text],
+.contact-section input[type=tel],
+.contact-section input[type=email]{
+   border-radius: 20px;
+   height: 42px;
+}
+.contact-section textarea,
+.contact-section input[type=text],
+.contact-section input[type=tel],
+.contact-section input[type=email] {
+
+  padding: 5px;
+  outline: none;
+  border: 2px solid grey;
+  color: #fff;
+
+}
+
+ .buttonContainer {
+
+ background-color: #cb8364;
+ border: none;
+ border-radius: 50px;
+
+ padding: -20px !;
+}
+
+@media screen and (max-width: 565px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-section {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+   
+    /* background: white; */
+    padding: 30px;
+    border-radius: 5px;
+    height: 500px;
+    margin-left: 0px;
+    width: 100%;
+    margin: 12px;
+  
+      /* box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); */
+    
+  }
+  .portfolioContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    margin:0 20px;
+}
+/* .portfolioContainer div:nth-of-type(1) {flex-grow: 3;} */
+.portfolioRightContainer{
+  /* width: 100%; */
+  height: auto;
+  /* background-color: blue; */
+  padding: 0px 0px;
+  
+
+}
+.portfolioRightContainer p{
+  text-align: justify;
+
+}
+.portfolioRightContainer h5{
+  padding-bottom: 20px;
+}
+.portfolioRightContainer .portfolioGridtextContainer{
+  display: flex;
+  /* flex-direction: column; */
+  align-items: flex-start;
+  justify-content: center;
+  /* row-gap: 20px */
+  margin:10px 5px;
+}
+.portfolioGridtextContainer h6{
+  color: #cb8364 !important;
+  font-weight: 700;
+}
+.portfolioRightContainer button{
+  border: none;
+  background-color: #cb8364;
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 2px;
+  font-size: 14px;
+}
+.image-card{
+  position: relative;
+  height: 400px;
+  width: auto;
+  overflow: hidden;
+  border-radius: 3px;
+  transition: all .4s;
+}
+.serviceContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.b {
+  width: auto;
+  height: 60vh;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23ffffff' stroke-width='.5' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cuse fill='%23fafafa' href='%23s' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23f5f5f5' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23f5f5f5' href='%23s'/%3E%3Cuse fill='%23f0f0f0' href='%23s' x='2'/%3E%3Cuse fill='%23f0f0f0' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23ebebeb'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23ebebeb'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23e5e5e5'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23ffffff'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23e0e0e0'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  /* overflow: hidden; */
+  /* row-gap: 200px; */
+ 
+}
+.ulContact{
+  display: none;
+}
+
+
+
+}

@@ -1,0 +1,24 @@
+.priceMaain{
+    display: flex;
+    flex-direction: column;
+    /* width: 50%; */
+    width: 580px;
+
+}
+.pdetails-Main{
+    padding: 20px;
+    width: 100%;
+    margin: 0;
+}
+@media(max-width: 565px){
+    .priceMaain{
+        display: flex;
+        flex-direction: column;
+      align-items: center;
+     justify-content: center;
+     width: 100%;
+    }
+  .hiddendetInMobile{
+      display: none;
+  }
+}
